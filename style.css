@@ -7,13 +7,13 @@ body {
   polygon.transport-btn {
     stroke: #444;
     stroke-width: 2;
-    fill: #222;
+    fill: #ccc;
   }
   
   polygon.transport-btn:hover {
     stroke: #666;
     stroke-width: 2;
-    fill: #444;
+    fill: #fff;
     cursor:pointer;
   }
   
@@ -23,3 +23,10 @@ body {
     fill: steelBlue;
     cursor:pointer;
   }
+  .instrument {
+    background: white;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

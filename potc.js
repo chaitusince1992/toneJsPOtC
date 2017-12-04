@@ -1976,15 +1976,27 @@ var piratesMID = {
 console.log("here");
   // piono
 var synth = new Tone.PolySynth(4, Tone.Synth, {
-	"volume" : -5,
-	"oscillator" : {
-			"partials" : [1, 5, 7],
+    "harmonicity": 3.01,
+    "modulationIndex": 14,
+    "oscillator": {
+        "type": "triangle"
     },
     "envelope": {
-        attack: 0.05,
-        release: 3
+        "attack": 0.2,
+        "decay": 0.3,
+        "sustain": 0.1,
+        "release": 1.2
     },
-	"portamento" : 0.005
+    "modulation" : {
+        "type": "square"
+    },
+    "modulationEnvelope" : {
+        "attack": 0.01,
+        "decay": 0.5,
+        "sustain": 0.2,
+        "release": 0.1
+    }
+	// "portamento" : 0.005
 }).toMaster();
 
 console.log(piratesMID.tracks.notes);
@@ -1995,4 +2007,64 @@ var part = new Tone.Part(function(time, value){
     synth.triggerAttackRelease(value.name, value.duration, time);
 }, piratesMID.tracks[0].notes).start('0:0');
 
-Tone.Transport.start();
+play = function() {
+    Tone.Transport.start();
+}
+
+stop = function() {
+	Tone.Transport.stop();
+}
+
+guitar = function() {
+  synth.set({
+    "oscillator": {
+        "type": "fmsquare5",
+		"modulationType" : "triangle",
+      	"modulationIndex" : 2,
+      	"harmonicity" : 0.501
+    },
+    "filter": {
+        "Q": 1,
+        "type": "lowpass",
+        "rolloff": -24
+    },
+    "envelope": {
+        "attack": 0.01,
+        "decay": 0.1,
+        "sustain": 0.4,
+        "release": 2
+    },
+    "filterEnvelope": {
+        "attack": 0.01,
+        "decay": 0.1,
+        "sustain": 0.8,
+        "release": 1.5,
+        "baseFrequency": 50,
+        "octaves": 4.4
+    }
+})
+}
+brass = function() {
+  synth.set({
+  "harmonicity": 3.01,
+  "modulationIndex": 14,
+  "oscillator": {
+      "type": "triangle"
+  },
+  "envelope": {
+      "attack": 0.2,
+      "decay": 0.3,
+      "sustain": 0.1,
+      "release": 1.2
+  },
+  "modulation" : {
+      "type": "square"
+  },
+  "modulationEnvelope" : {
+      "attack": 0.01,
+      "decay": 0.5,
+      "sustain": 0.2,
+      "release": 0.1
+  }
+})
+}

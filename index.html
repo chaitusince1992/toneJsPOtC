@@ -5,19 +5,24 @@
         <link rel="stylesheet" href="style.css">
     </header>
     <body>
-        <svg width="100" viewBox="0 0 100 50" preserveAspectRation="xMin yMid meet">
-            <g transform="translate(0,0)">
-              <polygon class="transport-btn transport-btn-play" onclick="play()" points="5,5 45,25 5,45">
-                <title>Play</title>
-              </polygon>
-            </g>
-            <g transform="translate(50,0)">
-              <polygon class="transport-btn transport-btn-stop" onclick="stop()" points="10,10 40,10 40,40 10,40">
-                <title>Stop</title>
-              </polygon>
-            </g>
-          </svg>
 
+        <div class="instrument guitar" onclick="guitar()">Guitar</div>
+        <div class="instrument brass" onclick="brass()">Brass</div>
+        <div class="play-pause">
+            <svg width="100" viewBox="0 0 100 50" preserveAspectRation="xMin yMid meet">
+                <g transform="translate(0,0)">
+                  <polygon class="transport-btn transport-btn-play" onclick="play()" points="5,5 45,25 5,45">
+                    <title>Play</title>
+                  </polygon>
+                </g>
+                <g transform="translate(50,0)">
+                  <polygon class="transport-btn transport-btn-stop" onclick="stop()" points="10,10 40,10 40,40 10,40">
+                    <title>Stop</title>
+                  </polygon>
+                </g>
+              </svg>
+        </div>
+        
         <script src="Tone.js"></script>
         <script src="Rhythm.js"></script>
         <!-- <script src="script-2.js"></script> -->
