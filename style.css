@@ -1,0 +1,25 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+  
+  polygon.transport-btn {
+    stroke: #444;
+    stroke-width: 2;
+    fill: #222;
+  }
+  
+  polygon.transport-btn:hover {
+    stroke: #666;
+    stroke-width: 2;
+    fill: #444;
+    cursor:pointer;
+  }
+  
+  polygon.transport-btn.active {
+    stroke: #fff;
+    stroke-width: 2;
+    fill: steelBlue;
+    cursor:pointer;
+  }

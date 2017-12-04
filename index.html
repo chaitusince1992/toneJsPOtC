@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Tone JS POC</title>
+        <link rel="stylesheet" href="style.css">
+    </header>
+    <body>
+        <svg width="100" viewBox="0 0 100 50" preserveAspectRation="xMin yMid meet">
+            <g transform="translate(0,0)">
+              <polygon class="transport-btn transport-btn-play" onclick="play()" points="5,5 45,25 5,45">
+                <title>Play</title>
+              </polygon>
+            </g>
+            <g transform="translate(50,0)">
+              <polygon class="transport-btn transport-btn-stop" onclick="stop()" points="10,10 40,10 40,40 10,40">
+                <title>Stop</title>
+              </polygon>
+            </g>
+          </svg>
+
+        <script src="Tone.js"></script>
+        <script src="Rhythm.js"></script>
+        <!-- <script src="script-2.js"></script> -->
+        <!-- <script src="interstellar.js"></script> -->
+        <script src="potc.js"></script>
+    </body>
+</html>
